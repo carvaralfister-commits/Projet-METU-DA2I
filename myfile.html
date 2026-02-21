@@ -7,31 +7,47 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
       margin: 0;
       padding: 0;
     }
 
     .container {
       width: 800px;
-      margin: 40px auto;
+      margin: 50px auto;
       background: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .main-title {
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+
+    .subtitle {
       text-align: center;
-      font-size: 36px;
-      color: #1e3c72;
+      font-size: 18px;
+      color: #333;
       margin-bottom: 30px;
-      letter-spacing: 2px;
+      font-weight: bold;
+      line-height: 1.6;
+    }
+
+    /* Effet EMIT */
+    .acronym {
+      font-size: 22px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #1e3c72, #2a5298);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     h2 {
       color: #2a5298;
-      margin-top: 25px;
+      margin-top: 30px;
       border-left: 5px solid #2a5298;
       padding-left: 10px;
     }
@@ -39,6 +55,7 @@
     p {
       margin: 5px 0;
       color: #333;
+      line-height: 1.6;
     }
 
     ul {
@@ -52,7 +69,7 @@
     }
 
     li::before {
-      content: "_ ";
+      content: "*";
       color: #2a5298;
       font-weight: bold;
     }
@@ -74,15 +91,27 @@
     }
 
     .photo img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #2a5298;
+      transition: transform 0.3s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.05);
     }
 
     .section {
-      margin-top: 20px;
+      margin-top: 25px;
+    }
+
+    .objectif {
+      background: #f4f7fc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
     }
 
   </style>
@@ -92,7 +121,13 @@
 
 <div class="container">
 
-  <h1 class="main-title">Curriculum Vitae</h1>
+  <div class="subtitle">
+    Étudiant en Licence 1 à l'
+    <span class="acronym">E</span>cole de 
+    <span class="acronym">M</span>anagement et de l'
+    <span class="acronym">I</span>nnovation 
+    <span class="acronym">T</span>echnologique
+  </div>
 
   <div class="section info-section">
     <div class="info-text">
@@ -131,7 +166,7 @@
     <h2>Centres d’intérêt</h2>
     <ul>
       <li>Musique</li>
-      <li>Sport</li>
+      <li>Basketball</li>
       <li>Informatique</li>
     </ul>
   </div>
@@ -143,6 +178,16 @@
       <li><strong>Email :</strong> andryaimerandrianantenaina@gmail.com</li>
       <li><strong>Facebook :</strong> Andry Andriarimanana</li>
     </ul>
+  </div>
+
+  <div class="section">
+    <h2>Objectif</h2>
+    <div class="objectif">
+      <p>
+        Grand amateur de tech, motivé et passionné par le développement web et les nouvelles technologies,
+        à la recherche d'opportunités pour développer mes compétences.
+      </p>
+    </div>
   </div>
 
 </div>
